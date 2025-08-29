@@ -21,8 +21,14 @@ return {
 				lua = { "stylua" },
 				python = { "isort", "black" },
 			},
+			formatters = {
+				prettier = {
+					command = "prettier",
+					args = { "--stdin-filepath", "$FILENAME" },
+				},
+			},
 			format_on_save = {
-				lsp_fallback = true,
+				lsp_fallback = false,
 				async = false,
 				timeout_ms = 1000,
 			},

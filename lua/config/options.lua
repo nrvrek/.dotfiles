@@ -11,3 +11,6 @@ vim.g.loaded_netrw = 1
 vim.g.loaded_netrwplugin = 1
 -- optionally enable 24-bit color
 vim.opt.termguicolors = true
+
+vim.wo.number = true
+vim.wo.relativenumber = true

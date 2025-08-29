@@ -10,8 +10,11 @@ return {
 		require("nvim-tree").setup({
 			filters = {
 				dotfiles = true,
-				},
-			vim.keymap.set('n', '<leader>ee', "<cmd>NvimTreeToggle<CR>", {desc = "Toggle file explorer" }) 
-			})
+			},
+		})
+		local keymap = vim.keymap.set
+		keymap("n", "<leader>ee", "<cmd>NvimTreeToggle<CR>", { desc = "Toggle file explorer " })
+		keymap("n", "<leader>ef", "<cmd>NvimTreeFindFileToggle<CR>", { desc = "Focus explorer (current file)" })
+		keymap("n", "<leader>ec", "<cmd>NvimTreeCollapse<CR>", { desc = "Collapse explorer " })
 	end,
 }
